@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+@font-face  {
+				font-family: 'x360';
+				src: url('../fonts/X360.ttf');
+				format: (truetype);
+				font-weight: normal;
+				font-style: normal;
+}
+
+@font-face  {
+				font-family: 'Verahbi';
+				src: url('../fonts/Verah___.ttf');
+				format: (truetype);
+				font-weight: normal;
+				font-style: normal;
+}
+
+@font-face  {
+				font-family: 'Nixie One';
+				src: url('../fonts/NixieOne.ttf');
+				format: (truetype);
+				font-style: normal;
+				font-weight: normal;
+}
+
+:root {
+				--cor1: #0D1117; /* Preto */
+				--cor2: #1A1B27; /* Fundo */
+				--cor3: #38BBAC; /* Perfil Pessoal */
+				--cor4: #70A4FB; /* Prazer */
+				--cor5: #8D6DB5; /* Botão */
+				
+				--fonte-codigo: 'Nixie One', monospace;
+				--fonte-cabecalho: 'x360', Arial, Helvetca, sans-serif;
+				--fonte-padrao: 'Verahbi', Arial, Helvetica, sans-serif;
+}
+
+* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+				font-family: var(--fonte-padrao);
+}
+
+body {
+				background-color: var(--cor2);
+}
+
+header {
+				background-color: var(--cor1);
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				position: fixed;
+				top: 0;
+}
+
+header div {
+				display: flex;
+				align-items: center;
+				padding: 10px;
+}
+
+header div img {
+				width: 100px;
+}
+
+header div h2 {
+				color: var(--cor3);
+				font-family: var(--fonte-cabecalho);
+}
+
+nav ul {
+				display: flex;
+				list-style: none;
+}
+
+nav ul li {
+				padding: 0px 15px;
+				font-family: var(--fonte-cabecalho);
+				font-size: 1.4em;
+}
+
+nav ul li a {
+				color: white;
+				text-decoration: none;
+				transition-duration: .7s;
+}
+
+nav ul li a:hover {
+				color: var(--cor3);
+}
+
+h1 {
+				color: white;
+}
+
+.container {
+				margin-top: 131px;
+				padding: 45px;
+}
+
+.align {
+				display: flex;
+}
+
+.align .contact {
+				width: 25%;
+}
+
+.align .contact img {
+				width: 100%;
+}
+
+.align .contact p {
+				text-align: center;
+				font-size: 1.6em;
+}
+
+.align .contact p > a {
+				text-decoration: none;
+				color: white;
+}
+
+.align .contact p > a:hover {
+				color: var(--cor5);
+				text-decoration: underline;
+}
+
+h1, h2 {
+				color: white;
+				text-align: center;
+}
+
+.container h1 {
+				padding-top: 70px;
+				font-size: 2em;
+}
+
+.container h2 {
+				font-size: 1em;
+				padding-bottom: 50px;
+}
+
+.container h2::before {
+				content: '— ';
+				color: var(--cor4);
+}
+
+.container h2::after {
+				content: ' —';
+				color: var(--cor4);
+}
+
+/* -------------------- BREAKPOINT ----------------------- */
+
+@media(max-width: 670px){
+				header {
+								flex-direction: column;
+				}
+				
+				header div img {
+								width: 70px;
+				}
+				
+				nav ul li {
+								font-size: 1.2em;
+								padding: 10px 15px;
+				}
+}
+
+@media(max-width: 560px){
+				header div img {
+								width: 50px;
+				}
+				
+				header div h2 {
+								font-size: 1em;
+				}
+				
+				nav ul li {
+								padding: 10px 15px;
+								text-align: center;
+				}
+				
+				.container h1 {
+								padding-top: 0px;
+				}
+				
+				.align {
+								flex-direction: column;
+				}
+				
+				.align .contact {
+								width: 75%;
+								margin: auto;
+				}
+				
+				.contact p {
+								text-align: center;
+				}
+}
